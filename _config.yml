@@ -1,131 +1,66 @@
 # Site
-name: "Blog amp"
-title: "Blog amp"
-description: "Cara mencari janda muda di dunia onlien"
-meta_description: "Cara mencari janda muda di dunia onlien by penelitionlien"
-url: "https://berita-blogger.github.io/"
-logo: 'assets/images/logopostkomik.jpg'
-favicon: 'assets/images/favicon.png'
-paginate: 6
-paginate_path: "/blog/page:num/"
-permalink: /blog/:year/:month/:day/:title
-timezone: 'Asia/Hong_Kong'
+
+title:              Peneliti
+bio:                "Berbagi informasi mendidik"
+description:        "Berbagi informasi pendidikan"
+reading_time:       true
+words_per_minute:   200
+logo:               '/assets/img/favicon.ico'
+locale:             en_US
 baseurl: ''
-email: ''
-google_analytics: 'xxxxx' # Google Analytics Tracking ID
-gtm: 'xxxx' # Google Tag Manager ID
-cse_id: 011006674894885990812:tjln7k0nyjx # Google Custom Search Engine ID
-adsense: 'ca-pub-xxxx' # Google Adsense ID
-disqus: 'chriskyfung' # Disqus shortname
-amp_disqus_url: 'https://chriskyfung.gitlab.io/disqus-amp/q.html' #baseurl of your AMP disqus iframe element
-addthis: ra-600fe4460cfd813e
-buyme: 
-sidebar:
-  featured: true
-  recent_posts: true
-repository: berita-blogger/berita-blogger.github.io #<USERNAME>/<PROJECT>
+author: 'Postkomik'
+author-bio:  'Web Developer'
+# Jekyll
+permalink:          /:title/
+markdown:           kramdown      
+kramdown:
+  auto_ids:         true
+  footnote_nr:      1
+  entity_output:    as_char
+  toc_levels:       1..6
+  enable_coderay:   false
 
-# Authors
-authors:
-  John:
-    name: John Washer
-    display_name: John
-    gravatar: 
-    email: 
-    web: 
-    facebook: https://www.facebook.com/
-    description: 
-  Peter:
-    name: Peter Mu
-    display_name: Peter
-    gravatar: 
-    email: 
-    web: 
-    facebook: https://www.facebook.com/
-    description: 
-  Peter:
-    name: Sal
-    display_name: Sal
-    gravatar: 
-    email: 
-    web: 
-    facebook: https://www.facebook.com/
-    description: 
-  Postkomik:  
-    name: Penelitionlien
-    display_name: Penelitionlien
-    gravatar: 
-    email: 
-    web: 
-    facebook: https://www.facebook.com/post.komik.54
-    description: 
+# Social
+# if you don't have any of social below, comment the line.
 
-# Plugins
-plugins: 
-  - jekyll-paginate
-  - jekyll-sitemap
+google-analytics:	UA-80564042-1
+#google-verify:
+#adsense-client:   #ca-pub-2222111111111000
+#adsense-slot:     #3888000000
+#bing-verify:
+repository:     https://github.com/postkomik/postkomik.github.io #full url to github repo for "Edit this page" link, comment it to disable
+email:			
+twitter:            
+#facebook:           username
+#yandex-verification:
+github:             
+#stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
+#linkedin:          
+#xing:              username
+#instagram:          
+#lastfm:            
+#tumblr:            username
+#pinterest:         username
+#foursquare:        username
+#steam:              username
+#dribbble:          username
+youtube:          
+#codepen:           username
+#hackernews:        username
+# Gems
+
+plugins:
+  - jekyll-mentions
   - jekyll-feed
-  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-paginate
   - jekyll-archives
-  - jekyll-target-blank
-  - jekyll-webp
-  - jekyll-gzip
-  - jekyll-redirect-from
-  - jekyll-github-metadata
-        
-# Archives
-jekyll-archives:
-  enabled:
-    - categories
-    - tags
-  layout: archive
-  permalinks: 
-    category: '/category/:name/'
-    tag: '/tag/:name/'
+paginate: 6
+paginate_path: /page:num/
 
-# Other
-markdown: kramdown
-highlighter: rouge
-environment: production
+jekyll-mentions:
+    base_url: https://github.com
 
-jekyll-minifier:
-  exclude: 'feed.xml' # Exclude files from processing - file name, glob pattern or array of file names and glob patterns
-
-
-############################################################
-# Site configuration for the WebP Generator Plugin
-# The values here represent the defaults if nothing is set
-webp:
-  enabled: true
-  
-  # The quality of the webp conversion 0 to 100 (where 100 is least lossy)
-  quality: 75
-
-  # List of directories containing images to optimize, nested directories will only be checked if `nested` is true
-  # By default the generator will search for a folder called `/img` under the site root and process all jpg, png and tiff image files found there.
-  img_dir: ["/images/", "/assets/images"]
-
-  # Whether to search in nested directories or not
-  nested: true
-
-  # add ".gif" to the format list to generate webp for animated gifs as well
-  formats: [".jpeg", ".jpg", ".png", ".tiff"]
-
-  # File extensions for animated gif files 
-  gifs: [".gif"]
-
-  # Set to true to always regenerate existing webp files
-  regenerate: false
-
-  # Local path to the WebP utilities to use (relative or absolute)
-  # Omit or leave as nil to use the utilities shipped with the gem, override only to use your local install
-  webp_path: nil
-
-  # List of files or directories to excludes
-  # e.g. custom or hand generated webp conversion files
-  exclude: []
-
-  # append '.webp' to filename after original extension rather than replacing it.
-  # Default transforms `image.png` to `image.webp`, while changing to true transforms `image.png` to `image.png.webp`
-  append_ext: false
-############################################################
+# Exclude list
+exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile]

@@ -1,158 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  
-  
-  
-      <url>
-        <loc>/</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-       </url>
-  
-  
-  
-      <url>
-        <loc>/search</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-       </url>
-  
-  
-  
-  
-  
-      <url>
-        <loc>/tag/media/</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-       </url>
-  
-  
-  
-      <url>
-        <loc>/tag/contact/</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-       </url>
-  
-  
-  
-      <url>
-        <loc>/category/manga/</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-       </url>
-  
-  
-  
-      <url>
-        <loc>/category/contact/</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-       </url>
-  
-  
-  
-      <url>
-        <loc>/redirects.json</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-       </url>
-  
-  
-  
-  
-  
-      <url>
-        <loc>/robots.txt</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-       </url>
-  
-  
-  
-      <url>
-        <loc>/blog/page2/</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-       </url>
-  
-  
-  
-  
-  
-      <url>
-        <loc>/blog/2021/02/02/Backlink-profile</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-       </url>
-  
-      <url>
-        <loc>/blog/2021/02/02/contoh-tanaman-hias</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-       </url>
-  
-      <url>
-        <loc>/blog/2021/02/02/contoh-artikel-ilmiah</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-       </url>
-  
-      <url>
-        <loc>/blog/2021/02/02/Kursus-seo-terbaik</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-       </url>
-  
-      <url>
-        <loc>/blog/2021/02/02/Backlink-profile-blog</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-       </url>
-  
-      <url>
-        <loc>/blog/2018/01/12/we-all-wait-for-summer</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-       </url>
-  
-      <url>
-        <loc>/blog/2018/01/12/tree-of-codes</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-       </url>
-  
-      <url>
-        <loc>/blog/2018/01/12/red-riding</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-       </url>
-  
-      <url>
-        <loc>/blog/2018/01/12/powerful-things-markdown-editor</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-       </url>
-  
-      <url>
-        <loc>/blog/2018/01/12/is-intelligence-enough</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-       </url>
-  
-      <url>
-        <loc>/blog/2017/11/27/About-me</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-       </url>
-  
-      <url>
-        <loc>/blog/2017/11/27/media</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-       </url>
-  
-  
+<url>
+<loc>/Another-post/</loc>
+<lastmod>2020-01-01T00:00:00+07:00</lastmod>
+</url>
+<url>
+<loc>/yet-another-post/</loc>
+<lastmod>2020-01-01T00:00:00+07:00</lastmod>
+</url>
+<url>
+<loc>/Another-Article/</loc>
+<lastmod>2020-02-01T00:00:00+07:00</lastmod>
+</url>
+<url>
+<loc>/First-Article/</loc>
+<lastmod>2020-02-01T00:00:00+07:00</lastmod>
+</url>
+<url>
+<loc>/amp-photo-slider/</loc>
+<lastmod>2020-02-06T00:00:00+07:00</lastmod>
+</url>
+<url>
+<loc>/code-post/</loc>
+<lastmod>2020-02-06T00:00:00+07:00</lastmod>
+</url>
+<url>
+<loc>/post-with-images/</loc>
+<lastmod>2020-02-06T00:00:00+07:00</lastmod>
+</url>
+<url>
+<loc>/about/</loc>
+</url>
+<url>
+<loc>/tags/</loc>
+</url>
+<url>
+<loc>/</loc>
+</url>
+<url>
+<loc>/about/</loc>
+</url>
+<url>
+<loc>/page2/</loc>
+</url>
 </urlset>
