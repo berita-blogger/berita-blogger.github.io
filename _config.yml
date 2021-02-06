@@ -5,7 +5,7 @@ bio:                "Berbagi informasi mendidik"
 description:        "Berbagi informasi pendidikan"
 reading_time:       true
 words_per_minute:   200
-logo:               '/assets/img/favicon.ico'
+logo:               '/assets/img/logo.png'
 locale:             en_US
 baseurl: /
 author: 'Postkomik'
@@ -28,7 +28,7 @@ google-analytics:	UA-80564042-1
 #adsense-client:   #ca-pub-2222111111111000
 #adsense-slot:     #3888000000
 #bing-verify:
-repository:     https://github.com/postkomik/postkomik.github.io #full url to github repo for "Edit this page" link, comment it to disable
+repository:     https://github.com/berita-blogger/berita-blogger.github.io #full url to github repo for "Edit this page" link, comment it to disable
 email:			
 twitter:            
 #facebook:           username
