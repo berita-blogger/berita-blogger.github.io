@@ -1,0 +1,114 @@
+I"k"<p>Here’s a line of code</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    int b = 0;
+</code></pre></div></div>
+
+<p>And Here’s a block of code</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="c1">//start the transaction</span>
+<span class="nv">$query</span>  <span class="o">=</span> <span class="s2">"BEGIN WORK;"</span><span class="p">;</span>
+<span class="nv">$result</span> <span class="o">=</span> <span class="nb">mysql_query</span><span class="p">(</span><span class="nv">$query</span><span class="p">);</span>
+<span class="c1">//stop the transaction</span>
+<span class="nv">$sql</span> <span class="o">=</span> <span class="s2">"ROLLBACK;"</span><span class="p">;</span>
+<span class="nv">$result</span> <span class="o">=</span> <span class="nb">mysql_query</span><span class="p">(</span><span class="nv">$sql</span><span class="p">);</span>
+<span class="c1">//commit the transaction</span>
+<span class="nv">$sql</span> <span class="o">=</span> <span class="s2">"COMMIT;"</span><span class="p">;</span>
+<span class="nv">$result</span> <span class="o">=</span> <span class="nb">mysql_query</span><span class="p">(</span><span class="nv">$sql</span><span class="p">);</span>
+<span class="cp">?&gt;</span></code></pre></figure>
+
+<blockquote>
+  <p>and That’s Quotation: 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim sit amet venenatis urna cursus eget nunc. Suscipit tellus mauris a diam maecenas sed enim.</p>
+</blockquote>
+
+<p>And a bigger code</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="c1">//category.php</span>
+<span class="k">include</span> <span class="s1">'connect.php'</span><span class="p">;</span>
+<span class="k">include</span> <span class="s1">'header.php'</span><span class="p">;</span>
+ 
+<span class="c1">//first select the category based on $_GET['cat_id']</span>
+<span class="nv">$sql</span> <span class="o">=</span> <span class="s2">"SELECT
+            cat_id,
+            cat_name,
+            cat_description
+        FROM
+            categories
+        WHERE
+            cat_id = "</span> <span class="mf">.</span> <span class="nb">mysql_real_escape_string</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">'id'</span><span class="p">]);</span>
+ 
+<span class="nv">$result</span> <span class="o">=</span> <span class="nb">mysql_query</span><span class="p">(</span><span class="nv">$sql</span><span class="p">);</span>
+ 
+<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nv">$result</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">echo</span> <span class="s1">'The category could not be displayed, please try again later.'</span> <span class="mf">.</span> <span class="nb">mysql_error</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="k">else</span>
+<span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="nb">mysql_num_rows</span><span class="p">(</span><span class="nv">$result</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">echo</span> <span class="s1">'This category does not exist.'</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="c1">//display category data</span>
+        <span class="k">while</span><span class="p">(</span><span class="nv">$row</span> <span class="o">=</span> <span class="nb">mysql_fetch_assoc</span><span class="p">(</span><span class="nv">$result</span><span class="p">))</span>
+        <span class="p">{</span>
+            <span class="k">echo</span> <span class="s1">'&lt;h2&gt;Topics in ′'</span> <span class="mf">.</span> <span class="nv">$row</span><span class="p">[</span><span class="s1">'cat_name'</span><span class="p">]</span> <span class="mf">.</span> <span class="s1">'′ category&lt;/h2&gt;'</span><span class="p">;</span>
+        <span class="p">}</span>
+     
+        <span class="c1">//do a query for the topics</span>
+        <span class="nv">$sql</span> <span class="o">=</span> <span class="s2">"SELECT  
+                    topic_id,
+                    topic_subject,
+                    topic_date,
+                    topic_cat
+                FROM
+                    topics
+                WHERE
+                    topic_cat = "</span> <span class="mf">.</span> <span class="nb">mysql_real_escape_string</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">'id'</span><span class="p">]);</span>
+         
+        <span class="nv">$result</span> <span class="o">=</span> <span class="nb">mysql_query</span><span class="p">(</span><span class="nv">$sql</span><span class="p">);</span>
+         
+        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nv">$result</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">echo</span> <span class="s1">'The topics could not be displayed, please try again later.'</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span><span class="nb">mysql_num_rows</span><span class="p">(</span><span class="nv">$result</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">echo</span> <span class="s1">'There are no topics in this category yet.'</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">else</span>
+            <span class="p">{</span>
+                <span class="c1">//prepare the table</span>
+                <span class="k">echo</span> <span class="s1">'&lt;table border="1"&gt;
+                      &lt;tr&gt;
+                        &lt;th&gt;Topic&lt;/th&gt;
+                        &lt;th&gt;Created at&lt;/th&gt;
+                      &lt;/tr&gt;'</span><span class="p">;</span> 
+                     
+                <span class="k">while</span><span class="p">(</span><span class="nv">$row</span> <span class="o">=</span> <span class="nb">mysql_fetch_assoc</span><span class="p">(</span><span class="nv">$result</span><span class="p">))</span>
+                <span class="p">{</span>               
+                    <span class="k">echo</span> <span class="s1">'&lt;tr&gt;'</span><span class="p">;</span>
+                        <span class="k">echo</span> <span class="s1">'&lt;td class="leftpart"&gt;'</span><span class="p">;</span>
+                            <span class="k">echo</span> <span class="s1">'&lt;h3&gt;&lt;a href="topic.php?id='</span> <span class="mf">.</span> <span class="nv">$row</span><span class="p">[</span><span class="s1">'topic_id'</span><span class="p">]</span> <span class="mf">.</span> <span class="s1">'"&gt;'</span> <span class="mf">.</span> <span class="nv">$row</span><span class="p">[</span><span class="s1">'topic_subject'</span><span class="p">]</span> <span class="mf">.</span> <span class="s1">'&lt;/a&gt;&lt;h3&gt;'</span><span class="p">;</span>
+                        <span class="k">echo</span> <span class="s1">'&lt;/td&gt;'</span><span class="p">;</span>
+                        <span class="k">echo</span> <span class="s1">'&lt;td class="rightpart"&gt;'</span><span class="p">;</span>
+                            <span class="k">echo</span> <span class="nb">date</span><span class="p">(</span><span class="s1">'d-m-Y'</span><span class="p">,</span> <span class="nb">strtotime</span><span class="p">(</span><span class="nv">$row</span><span class="p">[</span><span class="s1">'topic_date'</span><span class="p">]));</span>
+                        <span class="k">echo</span> <span class="s1">'&lt;/td&gt;'</span><span class="p">;</span>
+                    <span class="k">echo</span> <span class="s1">'&lt;/tr&gt;'</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+ 
+<span class="k">include</span> <span class="s1">'footer.php'</span><span class="p">;</span>
+<span class="cp">?&gt;</span></code></pre></figure>
+
+<p>Dignissim sodales ut eu sem. Amet volutpat consequat mauris nunc congue nisi. Pharetra convallis posuere morbi leo. Ac auctor augue mauris augue neque.</p>
+:ET

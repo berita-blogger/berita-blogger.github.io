@@ -7,7 +7,7 @@ reading_time:       true
 words_per_minute:   200
 logo:               '/assets/img/favicon.ico'
 locale:             en_US
-baseurl: ''
+baseurl: /
 author: 'Postkomik'
 author-bio:  'Web Developer'
 # Jekyll
