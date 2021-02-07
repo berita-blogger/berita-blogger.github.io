@@ -1,66 +1,66 @@
-# Site
+# Site settings
+title: Hanuman
+description: Hanuman is a minimal yet powerful Jekyll theme for your blogs and websites.
+cover: assets/images/radhakrishna.jpg
+logo: assets/images/logo.png
+favicon: assets/images/favicon.png
+baseurl: "/hanuman/" # the subpath of your site, e.g. /blog/ or / for root
+url: "https://samanyougarg.com" # the base hostname & protocol for your site
 
-title:              Peneliti
-bio:                "Berbagi informasi mendidik"
-description:        "Berbagi informasi pendidikan"
-reading_time:       true
-words_per_minute:   200
-logo:               '/assets/img/logo.png'
-locale:             en_US
-baseurl: 
-author: 'Postkomik'
-author-bio:  'Web Developer'
-# Jekyll
-permalink:          /:title/
-markdown:           kramdown      
-kramdown:
-  auto_ids:         true
-  footnote_nr:      1
-  entity_output:    as_char
-  toc_levels:       1..6
-  enable_coderay:   false
+pagination:
+
+  # Site-wide kill switch, disabled here it doesn't run at all 
+  enabled: true
+
+  # Set to 'true' to enable pagination debugging. This can be enabled in the site config or only for individual pagination pages
+  debug: false
+
+  per_page: 5
 
 # Social
-# if you don't have any of social below, comment the line.
+facebook: facebook
+twitter: twitter
+github:  github
 
-google-analytics:	UA-80564042-1
-#google-verify:
-#adsense-client:   #ca-pub-2222111111111000
-#adsense-slot:     #3888000000
-#bing-verify:
-repository:     https://github.com/berita-blogger/berita-blogger.github.io
-email:			
-twitter:            
-#facebook:           username
-#yandex-verification:
-github:             
-#stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
-#linkedin:          
-#xing:              username
-#instagram:          
-#lastfm:            
-#tumblr:            username
-#pinterest:         username
-#foursquare:        username
-#steam:              username
-#dribbble:          username
-youtube:          
-#codepen:           username
-#hackernews:        username
-# Gems
+#Additional Pages
+about: about
+contact: contact
+privacy-policy: privacy-policy
+
+
+permalink: /:title
+
+
+# Google Analytics
+analytics_id: ""
+
+# Build settings
+markdown: kramdown
+
+kramdown:
+  parse_block_html: true
 
 plugins:
-  - jekyll-mentions
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-paginate
-  - jekyll-archives
-paginate: 6
-paginate_path: /page:num/
+  - jekyll-paginate-v2
 
-jekyll-mentions:
-    base_url: https://github.com
 
-# Exclude list
-exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile]
+# Settings for rake task
+safe: False
+lsi: False
+username: samanyougarg #github username
+repo: hanuman #github repository
+branch: master #branch
+relative_source: ../hanuman/ #source directory
+destination: ../hanuman-pages/ #destination directory
+production_url:  https://samanyougarg.com/
+source_url:  https://github.com/samanyougarg/hanuman #source repository url
+
+exclude:
+  - README.md
+  - Rakefile
+  - Gemfile
+  - Gemfile.lock
+  - changelog.md
+  - "*.Rmd"
+  - vendor
+  - .travis.yml
